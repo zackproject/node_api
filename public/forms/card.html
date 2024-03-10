@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Card</title>
+    <link rel="stylesheet" href="/card.css">
+</head>
+
+<body>
+    <h1>ADD Form Card</h1>
+    <!-- router.post('/') from cards.js but apps.js has route /cards -->
+    <form action="/cards" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="color">Color</label>
+        <input type="text" id="color" name="color" required>
+        <button type="submit">Send</button>
+    </form>
+</body>
+<style>
+    form {
+        border: 1px solid black;
+        padding: 10px;
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+</style>
+
+</html>

@@ -1,6 +1,11 @@
 const express = require('express');
-
+const bodyParser = require('body-parser');
 const app = express();
+//active use data form
+app.use(bodyParser.urlencoded({ extended: false }))
+// active parse form to json
+app.use(bodyParser.json())
+
 // add dotenv file with secret config
 require('dotenv').config();
 const port = process.env.PORT;
