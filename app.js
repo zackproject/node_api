@@ -1,10 +1,13 @@
 const express = require('express');
 
 const app = express();
-const port = 3000;
-const user = "";
-const password = "";
-const database = ""
+// add dotenv file with secret config
+require('dotenv').config();
+const port = process.env.PORT;
+const user = process.env.USER;
+const password = process.env.PASSWORD;
+const database = process.env.DATABASE;
+
 const uri = `mongodb+srv://${user}:${password}@cluster0.yleh4eg.mongodb.net/${database}?retryWrites=true&w=majority`;
 
 // to use mongoDB, installed mongoose
