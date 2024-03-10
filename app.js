@@ -23,6 +23,8 @@ app.use(express.static(__dirname + "/public"))
 app.use('/',require('./router/routes'))
 // add pets from pets.js
 app.use('/pets',require('./router/pets'))
+// add cards form cards.js
+app.use('/cards',require('./router/cards'))
 
 app.use((req, res, next) => {
     res.status(404).sendFile(__dirname + "/public/404.html")

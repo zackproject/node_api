@@ -7,13 +7,5 @@ router.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/index.html")
 });
 
-router.get('/cards', (req, res) => {
-    res.send("Pagina cartas")
-});
-
-router.get('/users', (req, res) => {
-    res.send("Pagina usuarios")
-});
-
 // export to can used in app.js
 module.exports = router;
